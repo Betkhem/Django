@@ -7,9 +7,11 @@ def home_view(request, *args, **kwargs):
 
 def about_view(request, *args, **kwargs):
     my_context = {
-    "my_text":'This is about me',
-    'my_number':123,
-    'my_list':[123, 4242, 12313]
+        "title":'this is about me',
+        'my_number':123,
+        "this_is_true":True,
+        'my_list':[123, 4242, 12313, 'ABC'],
+        "my_html":"<h1>Hello there!</h1>"
     }
     return render(request, "about.html" , my_context)
 

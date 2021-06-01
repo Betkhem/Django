@@ -7,7 +7,18 @@
 <p>This is a template.</p>
 
 <p>
-    {{ my_text }}, {{ my_number }}, {{ my_list }}
-    </p>
-
+    {{ title|capfirst }}, {{ my_number }}, {{ my_list }}
+</p>
+{{ my_html|striptags }}
+<ul>
+{% for abc in my_list %}
+    {% if abc == 312 %}
+    <li>{{ forloop.counter }} - {{ ab|add:22 }}</li>
+    {% elif abc == "ABC" %}
+    <li>This is not the network</li>
+    {% else %}
+    <li>{{ forloop.counter }} - {{ abc }}</li>
+    {% endif %}
+{% endfor %}
+</ul>
 {% endblock %}
