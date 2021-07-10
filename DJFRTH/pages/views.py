@@ -5,6 +5,12 @@ from django.shortcuts import render
 def home_view(request, *args, **kwargs):
     return render(request, "home.html", {})
 
+def dfs_view(request, *args, **kwargs):
+    new_dict = {
+        'chars' : ['frst', 'sec', 'thrd', '<h2>Yeah!</h2>']
+    }
+    return render(request, "dfs.html", new_dict)
+
 def about_view(request, *args, **kwargs):
     my_context = {
         "title":'this is about me',

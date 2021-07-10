@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for item in chars %}
+    {% if item == 'sec' %}
+        <h3>{{ forloop.counter|striptags }} - SECOND</h3>
+    {% else %}
+        <p>{{ forloop.counter }} - {{ item | safe }}</p>
+    {% endif %}
+{% endfor %}
+{% endblock %}
