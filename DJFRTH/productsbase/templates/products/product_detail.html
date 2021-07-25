@@ -4,4 +4,12 @@
 <h1>{{ obj.title }}</h1>
 <p>{{ obj.description }}</p>
 <h2>{{ obj.price }}</h2>
+
+<h1>------------------------------------------------------</h1>
+<ul>
+{% for elem in obj2 %}
+    <li>{{ elem.id }} - <a href='{{ elem.get_absolute_url }}'>{{ elem.title }}</a></li>
+    <!--<p>{{ instance.id }} - <a href='/products/{{ instance.id }}/'>{{ instance.title }}</a></p>-->
+{% endfor %}
+</ul>
 {% endblock %}
